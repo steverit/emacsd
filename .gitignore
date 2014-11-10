@@ -1,5 +1,9 @@
-# Compiled
+# gitignore
+*~
+\#*\#
 *.elc
-
-# Packaging
 .cask
+auto-save-list/
+
+# elpa
+elpa/
