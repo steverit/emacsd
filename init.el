@@ -5,6 +5,12 @@
 (load "better-defaults")
 (load "yaml-mode")
 
+;; autocomplete
+(add-to-list 'load-path "~/.emacs.d/elisp/autocomplete")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/autocomplete/ac-dict")
+(ac-config-default)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -17,3 +23,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'upcase-region 'disabled nil)
+
+;; org mode
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
