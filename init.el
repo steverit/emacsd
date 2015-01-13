@@ -1,9 +1,11 @@
 (add-to-list 'load-path "~/.emacs.d/elisp/")
+(package-initialize)
 
 ;; user settings
 (load "user")
 (load "better-defaults")
-(load "yaml-mode")
+(load "yaml-mode") 
+(load "ds-org")
 
 ;; autocomplete
 (add-to-list 'load-path "~/.emacs.d/elisp/autocomplete")
@@ -25,8 +27,3 @@
  )
 (put 'upcase-region 'disabled nil)
 
-;; org mode
-(require 'org)
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
