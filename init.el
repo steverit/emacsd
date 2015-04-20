@@ -1,11 +1,13 @@
 (add-to-list 'load-path "~/.emacs.d/elisp/")
 (package-initialize)
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 ;; user settings
 (load "user")
 (load "better-defaults")
 (load "yaml-mode") 
-(load "ds-org")
 
 ;; autocomplete
 (add-to-list 'load-path "~/.emacs.d/elisp/autocomplete")
